@@ -9,6 +9,15 @@ export const Content = styled.div`
   background-color: lightcyan;
 `;
 
+export const Main = styled.div`
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightcyan;
+`;
+
 export const LoginDiv = styled.div`
   border: 5px solid #ffd740;
   border-radius: 5px;

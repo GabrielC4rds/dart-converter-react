@@ -115,14 +115,14 @@ export default function Login() {
             )}
           </HidePasswordBtn>
         </Box>
-        <LoginBtn onClick={() => handleSubmit()}>
+        <LoginBtn onClick={() => handleSubmit()} disabled={isLoading}>
           {isLoading ? (
             <ReactLoading width={40} height={40} />
           ) : (
             <label>Entrar</label>
           )}
         </LoginBtn>
-        <RegistrationBtn onClick={() => handleRegistration()}>
+        <RegistrationBtn onClick={() => handleRegistration()}  disabled={isLoading}>
         {isLoading ? (
             <ReactLoading width={40} color={"grey"} height={40} />
           ) : (

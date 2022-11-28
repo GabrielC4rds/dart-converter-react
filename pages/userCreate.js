@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import { Content, LoginDiv, RegistrationBtn, HidePasswordBtn } from "./login/style";
+import { Main, LoginDiv, RegistrationBtn, HidePasswordBtn } from "./login/style";
 import TextField from "@mui/material/TextField";
 import { useState } from "react";
 import { useRouter } from "next/router";
@@ -7,6 +7,7 @@ import axios from "axios";
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import ReactLoading from "react-loading";
+import Header from '../components/Header'
 
 export default function UserCreate() {
   const [username, setUsername] = useState("");
@@ -39,7 +40,9 @@ export default function UserCreate() {
   }
 
   return (
-    <Content>
+    <>
+    <Header/>
+    <Main>
         <LoginDiv>
             <h1>Cadastro de Usuários</h1>
           <Box
@@ -87,7 +90,7 @@ export default function UserCreate() {
             )}
           </HidePasswordBtn>
           </Box>
-          <RegistrationBtn onClick={() => handleRegistration()}>
+          <RegistrationBtn onClick={() => handleRegistration()}  disabled={isLoading}>
           {isLoading ? (
             <ReactLoading width={40} color={"grey"} height={40} />
           ) : (
@@ -95,6 +98,7 @@ export default function UserCreate() {
           )}
           </RegistrationBtn>
         </LoginDiv>
-    </Content>
+    </Main>
+    </>
   );
 }
