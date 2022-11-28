@@ -65,7 +65,6 @@ export default function UserRegistration() {
         }
       )
       .then((res) => {
-        // setUsername(res.data.username);
         setData(
           res.data.map((row) => {
             return {

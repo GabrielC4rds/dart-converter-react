@@ -1,7 +1,5 @@
 import { Box } from "@mui/material";
-import Head from "next/head";
 import { Content, LoginDiv, RegistrationBtn, HidePasswordBtn } from "./login/style";
-import { styled } from "@mui/material/styles";
 import TextField from "@mui/material/TextField";
 import { useState } from "react";
 import { useRouter } from "next/router";

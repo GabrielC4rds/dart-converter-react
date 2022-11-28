@@ -1,4 +1,3 @@
-import Head from "next/head";
 import { Content } from "./style";
 import { useRouter } from "next/router";
 

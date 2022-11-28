@@ -1,5 +1,4 @@
 import { Box } from "@mui/material";
-import Head from "next/head";
 import {
   Content,
   LoginDiv,
@@ -7,11 +6,9 @@ import {
   RegistrationBtn,
   HidePasswordBtn,
 } from "./style";
-import { styled } from "@mui/material/styles";
 import TextField from "@mui/material/TextField";
 import { useState } from "react";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
 import axios from "axios";
 import ReactLoading from "react-loading";
 import VisibilityIcon from "@mui/icons-material/Visibility";
@@ -61,14 +58,12 @@ export default function Login() {
         }
       )
       .then((res) => {
-        // window.location.href = "/";
         alert("Novo Usuário Criado!");
         setIsLoading(false);
       })
       .catch((error) => {
         console.log(error);
         setIsLoading(false);
-        // setComparativeSingUp(error);
       });
   }
 
