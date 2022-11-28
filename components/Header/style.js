@@ -10,6 +10,10 @@ export const Content = styled.div`
   justify-content: space-between;
   button{ 
     cursor: pointer;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: #fff;
   }
   a{
     cursor: pointer;
